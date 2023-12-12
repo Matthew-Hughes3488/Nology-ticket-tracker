@@ -3,24 +3,33 @@ import { TicketCard } from "./components/TicketCard/TicketCard";
 import team from "./data/team"
 import "./App.scss"
 import { SearchBar } from "./components/SearchBar/SearchBar";
+import { DropDownBox } from "./components/DropDownBox/DropDownBox";
 
 function App() {
 
-  const [searchTerm, setSearchTerm] = useState<string>("")
+  const [searchTermName, setSearchTermName] = useState<string>("")
+  const [searchTermRole, setSearchTermRole] = useState<string>("")
 
 
   const handleInput = (event: FormEvent<HTMLInputElement>) =>{
-    setSearchTerm(event.currentTarget.value);
+    setSearchTermName(event.currentTarget.value);
+  }
+
+  const handleChange = (event: FormEvent<HTMLSelectElement>) =>{
+    setSearchTermRole(event.currentTarget.value);
   }
 
   const filteredTeam = team.filter(member =>{
-    return member.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const namesMatch = member.name.toLowerCase().includes(searchTermName.toLowerCase());
+    if(searchTermRole === "") return namesMatch;
+    else return namesMatch && member.role.toLowerCase() === searchTermRole;
   })
 
   return (
     <main className="tracker-app">
       <h1 className="tracker-app__title">Ticket Tracker</h1>
       <SearchBar filterBy="Name" handleInput={handleInput}/>
+      <DropDownBox handleChange={handleChange}/>
       <section className="tracker-cards">
         {filteredTeam.map(member => (
           <TicketCard name={member.name} role={member.role}/>
