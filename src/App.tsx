@@ -1,10 +1,13 @@
 import { useState } from 'react'
-import './App.css'
 
 function App() {
 
   return (
     <>
+    <h1>Ticket Tracker</h1>
+    <section className='tracker-cards'>
+
+    </section>
     </>
   )
 }
