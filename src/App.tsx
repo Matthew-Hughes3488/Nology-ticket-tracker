@@ -5,8 +5,8 @@ import "./App.scss"
 
 function App() {
   return (
-    <main>
-      <h1>Ticket Tracker</h1>
+    <main className="tracker-app">
+      <h1 className="tracker-app__title">Ticket Tracker</h1>
       <section className="tracker-cards">
         {team.map(member => (
           <TicketCard name={member.name} role={member.role}/>

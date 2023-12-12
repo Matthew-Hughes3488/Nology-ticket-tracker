@@ -4,13 +4,20 @@
     box-sizing: border-box;
 }
 
+.tracker-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title{
+        margin: 20px;
+    }
+}
+
 @media only screen and (min-width: 600px) {
-    main {
+    .tracker-app {
       display: flex;
       width: 100%;
       height: 100%;
-      flex-direction: column;
-      align-items: center;
       justify-content: space-evenly;
     }
 
@@ -21,9 +28,8 @@
   
 }
 
-
 @media only screen and (min-width: 1024px) {
-    main{
+    .tracker-app{
         height: 100vh;
     }
 
