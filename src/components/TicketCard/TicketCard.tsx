@@ -1,5 +1,6 @@
 import React from 'react'
 import { Counter } from '../Counter/Counter'
+import "./TicketCard.scss"
 
  type TicketCardProp = {
     name: string,

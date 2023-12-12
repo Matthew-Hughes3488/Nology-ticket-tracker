@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./Counter.scss"
 
 export const Counter = () => {
   const [counter, setCounter] = useState<number>(0);
@@ -13,15 +13,11 @@ export const Counter = () => {
   }
 
   return (
-    <div className="counter">
-      <h2 className="counter__title">Counter</h2>
-      <p className="counter__tracker">{counter}</p>
-      <p className="counter__increment" onClick={handleIncrement}>
-        +
-      </p>
-      <p className="counter__decrement" onClick={handleDecrement}>
-        -
-      </p>
-    </div>
+    <section className="counter-container">
+      <h2 className="counter-container__title">Counter</h2>
+      <p className="counter__decrement" onClick={handleDecrement}>-</p>
+      <p className="counter-container__tracker">{counter}</p>
+      <p className="counter__increment" onClick={handleIncrement}>+</p>
+    </section>
   );
 };
