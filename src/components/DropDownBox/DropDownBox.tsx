@@ -1,10 +1,14 @@
-import React from "react";
+import React, { FormEventHandler } from "react";
 
-export const DropDownBox = () => {
+type DropDownBoxProps = {
+    handleChange: FormEventHandler<HTMLSelectElement>;
+}
+
+export const DropDownBox = ({handleChange}: DropDownBoxProps) => {
   return (
-    <div>
+    <section className="dropdown-menu">
       <label htmlFor="employee-roles">Search By Role</label>
-      <select name="role" id="employee-roles">
+      <select name="role" id="employee-roles" onChange={handleChange}>
         <option value="junior software developer">
           Junior Software Developer
         </option>
@@ -16,6 +20,6 @@ export const DropDownBox = () => {
         <option value="Project Manager">Project Manager</option>
         <option value="hard man">Hard Man</option>
       </select>
-    </div>
+    </section>
   );
 };
