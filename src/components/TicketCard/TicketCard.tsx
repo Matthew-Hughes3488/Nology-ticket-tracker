@@ -1,13 +1,17 @@
 import React from 'react'
 
+ type TicketCardProp = {
+    name: string,
+    role: string
+}
 
 
-export const TicketCard = () => {
+export const TicketCard = ({name, role}: TicketCardProp) => {
   return (
-    <div>
-        <h1>USER NAME HERE</h1>
-        <h1>ROLE HERE</h1>
+    <section className='ticket-card'>
+        <h1 className='ticket-card__name'>{name}</h1>
+        <h1 className='ticket-card__role'>{role}</h1>
         /* ADD COUNTER COMPONENT HERE */
-    </div>
+    </section>
   )
 }
