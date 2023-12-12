@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tracker-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title{
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .tracker-app {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-evenly;
+    }
+
+    .tracker-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+}
+
+@media only screen and (min-width: 1024px) {
+    .tracker-app{
+        height: 100vh;
+    }
+
+  .tracker-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
