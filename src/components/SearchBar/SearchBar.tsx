@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FormEventHandler } from "react";
 
 type SearchBarProps = {
     filterBy: string,
-    handleInput: () => void
+    handleInput: FormEventHandler<HTMLInputElement>;
 }
 
 export const SearchBar = ({filterBy, handleInput} : SearchBarProps) => {
