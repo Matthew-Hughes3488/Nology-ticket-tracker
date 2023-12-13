@@ -1,4 +1,5 @@
 import React, { FormEventHandler } from "react";
+import "./SearchBar.scss"
 
 type SearchBarProps = {
     filterBy: string,
@@ -7,9 +8,9 @@ type SearchBarProps = {
 
 export const SearchBar = ({filterBy, handleInput} : SearchBarProps) => {
   return (
-    <div>
-      <label htmlFor="name-input">Search By {filterBy} </label>
-      <input id="name-input" type="text" onInput={handleInput}/>
+    <div className="search-bar-container">
+      <label className="search-bar-container__text" htmlFor="name-input">Search By {filterBy} </label>
+      <input className="search-bar-container__bar" id="name-input" type="text" onInput={handleInput}/>
     </div>
   );
 };
