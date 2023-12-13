@@ -1,5 +1,9 @@
+.ticket-cards{
+padding-bottom: 20px;
+}
+
 @media only screen and (min-width: 600px) {
-    .tracker-cards {
+    .ticket-cards {
         display: grid;
         grid-template-columns: repeat(2, 40vw);
       }
@@ -7,8 +11,9 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .tracker-cards {
+  .ticket-cards {
     display: grid;
     grid-template-columns: repeat(5, 20vw);
+    justify-content: flex-start;
   }
 }
