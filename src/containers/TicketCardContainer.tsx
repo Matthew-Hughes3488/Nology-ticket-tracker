@@ -10,7 +10,7 @@ export const TicketCardContainer = ({team} : TicketCardContainerProps) => {
   return (
     <section className="ticket-cards">
     {team.map(member => (
-      <TicketCard name={member.name} role={member.role}/>
+      <TicketCard key={member.id} name={member.name} role={member.role}/>
     ))}
   </section>
   )
