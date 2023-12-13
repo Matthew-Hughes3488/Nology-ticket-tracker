@@ -1,4 +1,5 @@
 import React, { FormEventHandler } from "react";
+import "./DropDownBox.scss"
 
 type DropDownBoxProps = {
     handleChange: FormEventHandler<HTMLSelectElement>;
@@ -6,9 +7,9 @@ type DropDownBoxProps = {
 
 export const DropDownBox = ({handleChange}: DropDownBoxProps) => {
   return (
-    <section className="dropdown-menu">
-      <label htmlFor="employee-roles">Search By Role</label>
-      <select name="role" id="employee-roles" onChange={handleChange}>
+    <section className="dropdown-container">
+      <label className="dropdown-container__text" htmlFor="employee-roles">Search By Role</label>
+      <select className="dropdown-container__menu" name="role" id="employee-roles" onChange={handleChange}>
       <option value="">All</option>
         <option value="junior software developer">
           Junior Software Developer
