@@ -1,5 +1,8 @@
+@use "./../../Variables.scss" as *;
+
 .search-bar-container{
     margin: 20px;
+    color: $color-orange;
 
     &__text{
         margin-right: 10px;
