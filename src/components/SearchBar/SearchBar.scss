@@ -1,8 +1,19 @@
+@use "./../../Variables.scss" as *;
+
 .search-bar-container{
     margin: 20px;
+    color: $color-orange;
 
     &__text{
         margin-right: 10px;
         font-size: 1rem;
+    }
+
+    &__bar{
+        border: 1px solid $color-light-grey;
+        color: $color-orange;
+        border-color: $color-light-grey;
+        border-radius: 5px;
+        background-color: $color-dark-grey;
     }
 }

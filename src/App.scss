@@ -1,7 +1,14 @@
+@use "./Variables.scss" as *;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-main;
+}
+
+body{
+    background-color: $color-background;
 }
 
 .tracker-app{
@@ -10,6 +17,7 @@
     align-items: center;
     &__title{
         margin: 20px;
+        color: $color-orange;
     }
 }
 

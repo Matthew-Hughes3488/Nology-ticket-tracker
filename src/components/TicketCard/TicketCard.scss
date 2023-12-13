@@ -1,5 +1,8 @@
+@use "./../../Variables.scss" as *;
+
 .ticket-card{
-    border: 2px solid black;
+    border: 2px solid $color-light-grey;
+    border-radius: 20px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -7,6 +10,8 @@
     font-size: 1.5rem;
     text-align: center;
     margin: 20px;
+    background-color: $color-dark-grey;
+    color: $color-orange;
 
     &__text{
         margin: 20px;
