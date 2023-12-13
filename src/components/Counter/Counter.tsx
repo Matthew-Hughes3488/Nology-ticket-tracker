@@ -15,9 +15,9 @@ export const Counter = () => {
   return (
     <section className="counter-container">
       <h2 className="counter-container__title">Counter</h2>
-      <p className="counter__decrement" onClick={handleDecrement}>-</p>
+      <button className="counter-container__button counter__button--decrement" onClick={handleDecrement}>-</button>
       <p className="counter-container__tracker">{counter}</p>
-      <p className="counter__increment" onClick={handleIncrement}>+</p>
+      <button className="counter-container__button counter__button--increment" onClick={handleIncrement}>+</button>
     </section>
   );
 };
