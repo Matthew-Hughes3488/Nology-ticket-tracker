@@ -1,0 +1,14 @@
+@media only screen and (min-width: 600px) {
+    .tracker-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+}
+
+@media only screen and (min-width: 1024px) {
+  .tracker-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

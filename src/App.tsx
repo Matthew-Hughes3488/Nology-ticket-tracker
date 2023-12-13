@@ -4,6 +4,7 @@ import team from "./data/team"
 import "./App.scss"
 import { SearchBar } from "./components/SearchBar/SearchBar";
 import { DropDownBox } from "./components/DropDownBox/DropDownBox";
+import { TicketCardContainer } from "./containers/TicketCardContainer";
 
 function App() {
 
@@ -30,11 +31,7 @@ function App() {
       <h1 className="tracker-app__title">Ticket Tracker</h1>
       <SearchBar filterBy="Name" handleInput={handleInput}/>
       <DropDownBox handleChange={handleChange}/>
-      <section className="tracker-cards">
-        {filteredTeam.map(member => (
-          <TicketCard name={member.name} role={member.role}/>
-        ))}
-      </section>
+      <TicketCardContainer team={filteredTeam}/>
     </main>
   );
 }
