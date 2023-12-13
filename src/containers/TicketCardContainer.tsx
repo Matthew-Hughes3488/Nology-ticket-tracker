@@ -8,7 +8,7 @@ type TicketCardContainerProps = {
 
 export const TicketCardContainer = ({team} : TicketCardContainerProps) => {
   return (
-    <section className="tracker-cards">
+    <section className="ticket-cards">
     {team.map(member => (
       <TicketCard name={member.name} role={member.role}/>
     ))}
