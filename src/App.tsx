@@ -1,5 +1,4 @@
 import { FormEvent, useState } from "react";
-import { TicketCard } from "./components/TicketCard/TicketCard";
 import team from "./data/team"
 import "./App.scss"
 import { SearchBar } from "./components/SearchBar/SearchBar";
