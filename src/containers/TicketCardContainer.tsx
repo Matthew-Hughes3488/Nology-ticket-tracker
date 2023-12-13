@@ -1,6 +1,7 @@
 import React from 'react'
 import { Member } from '../types/member'
 import { TicketCard } from '../components/TicketCard/TicketCard'
+import "./TicketCardContainer.scss"
 
 type TicketCardContainerProps = {
     team : Member[]

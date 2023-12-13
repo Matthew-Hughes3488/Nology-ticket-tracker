@@ -19,22 +19,11 @@
       width: 100%;
       height: 100%;
       justify-content: space-evenly;
-    }
-
-    .tracker-cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-  
+    }  
 }
 
 @media only screen and (min-width: 1024px) {
     .tracker-app{
         height: 100vh;
     }
-
-  .tracker-cards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-  }
 }
